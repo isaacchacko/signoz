@@ -10,9 +10,15 @@ export interface LabelTagProps {
 	label: string;
 	color?: BadgeColorType;
 	value?: string;
+	className?: string;
 }
 
-function LabelTag({ label, value, color }: LabelTagProps): JSX.Element {
+function LabelTag({
+	label,
+	value,
+	color,
+	className,
+}: LabelTagProps): JSX.Element {
 	const [, copyToClipboard] = useCopyToClipboard();
 	const displayText = value ? `${label}: ${value}` : label;
 	const searchFormat = value ? `${label} ${value}` : label;
@@ -39,11 +45,10 @@ function LabelTag({ label, value, color }: LabelTagProps): JSX.Element {
 				</div>
 			}
 		>
-			<span>
+			<span className={className}>
 				<Badge
 					textTransform="none"
 					color={color ?? 'secondary'}
-					maxWidth={180}
 					variant="outlined"
 					testId={`label-tag-${label}`}
 				>
