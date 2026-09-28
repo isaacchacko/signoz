@@ -58,6 +58,7 @@ function MapperRow({
 					{mapper.name}
 				</Typography.Text>
 				<Badge
+					textTransform="none"
 					color={
 						mapper.fieldContext === SpantypesFieldContextDTO.resource
 							? 'warning'
@@ -83,6 +84,7 @@ function MapperRow({
 					>
 						{visibleSources.map((source) => (
 							<Badge
+								textTransform="none"
 								variant="outlined"
 								color="secondary"
 								key={`${source.context}:${source.key}`}

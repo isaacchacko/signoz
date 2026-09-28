@@ -46,7 +46,12 @@ function PatternEditor({
 			<div className={styles.patternBox}>
 				<div className={styles.patternChips}>
 					{patterns.map((pattern) => (
-						<Badge key={pattern} color="secondary" variant="outlined">
+						<Badge
+							textTransform="none"
+							key={pattern}
+							color="secondary"
+							variant="outlined"
+						>
 							{pattern}*
 							{!isReadOnly && (
 								<button

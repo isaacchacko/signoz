@@ -178,7 +178,7 @@ export default function AlertRules({
 						</div>
 
 						<div className="alert-rule-item-description home-data-item-tag">
-							<Badge color="archive" variant="outlined">
+							<Badge textTransform="none" color="archive" variant="outlined">
 								{rule?.labels?.severity}
 							</Badge>
 

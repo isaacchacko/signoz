@@ -41,6 +41,7 @@ function LabelTag({ label, value, color }: LabelTagProps): JSX.Element {
 		>
 			<span>
 				<Badge
+					textTransform="none"
 					color={color ?? 'secondary'}
 					maxWidth={180}
 					variant="outlined"

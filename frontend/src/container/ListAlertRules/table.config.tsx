@@ -78,6 +78,7 @@ export function getAlertRuleColumns(
 				}
 				return (
 					<Badge
+						textTransform="none"
 						color={SEVERITY_BADGE_COLORS[severity] ?? 'secondary'}
 						variant="outlined"
 						testId={`alert-row-${row.id ?? ''}-severity`}

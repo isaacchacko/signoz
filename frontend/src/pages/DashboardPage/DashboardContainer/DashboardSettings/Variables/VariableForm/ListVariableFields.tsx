@@ -52,6 +52,7 @@ function ListVariableFields({
 					) : (
 						previewValues.map((value, idx) => (
 							<Badge
+								textTransform="none"
 								variant="solid"
 								// eslint-disable-next-line react/no-array-index-key -- preview values are display-only and may contain duplicates
 								key={`${value}-${idx}`}

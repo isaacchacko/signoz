@@ -49,12 +49,12 @@ export function GroupTagsCell({
 			</Button>
 			<div className={styles.tagsContainer}>
 				{tags.map((tag) => (
-					<Badge color="danger" key={tag} variant="outlined">
+					<Badge textTransform="none" color="danger" key={tag} variant="outlined">
 						{tag}
 					</Badge>
 				))}
 				{tags.length === 0 ? (
-					<Badge color="secondary" variant="outlined">
+					<Badge textTransform="none" color="secondary" variant="outlined">
 						{'<no-value>'}
 					</Badge>
 				) : null}

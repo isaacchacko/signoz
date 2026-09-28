@@ -17,6 +17,7 @@ function SelectedItemsChips({
 		<ul className={styles.chips} data-testid={testId}>
 			{ids.map((id) => (
 				<Badge
+					textTransform="none"
 					key={`selector-badge-${componentId}-${id}`}
 					variant="outlined"
 					color="secondary"

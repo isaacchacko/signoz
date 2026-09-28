@@ -94,7 +94,7 @@ export function LinkedSpansPanel({
 					badgeKey="Linked Span ID"
 					badgeValue={
 						<Link to={getLink(item)}>
-							<Badge variant="solid" color="secondary">
+							<Badge textTransform="none" variant="solid" color="secondary">
 								{item.spanId}
 							</Badge>
 						</Link>

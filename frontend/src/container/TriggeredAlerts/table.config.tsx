@@ -59,6 +59,7 @@ export function getAlertColumns(
 				}
 				return (
 					<Badge
+						textTransform="none"
 						color={SEVERITY_BADGE_COLORS[severity] ?? 'secondary'}
 						variant="outlined"
 						testId={testId}

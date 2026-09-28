@@ -11,7 +11,12 @@ interface TagBadgeProps {
 // styling stays identical across all of them.
 function TagBadge({ children, maxWidth }: TagBadgeProps): JSX.Element {
 	return (
-		<Badge color="archive" variant="outlined" maxWidth={maxWidth}>
+		<Badge
+			textTransform="none"
+			color="archive"
+			variant="outlined"
+			maxWidth={maxWidth}
+		>
 			{children}
 		</Badge>
 	);

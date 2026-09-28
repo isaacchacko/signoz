@@ -48,6 +48,7 @@ function Badges({ tags, setTags }: AddTagsProps): JSX.Element {
 		<div className="tags-container">
 			{tags.map<React.ReactNode>((tag) => (
 				<Badge
+					textTransform="none"
 					variant="solid"
 					key={tag}
 					color="secondary"

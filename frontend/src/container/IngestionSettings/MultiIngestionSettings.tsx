@@ -1064,7 +1064,12 @@ function MultiIngestionSettings(): JSX.Element {
 													<div className="ingestion-key-tags">
 														{APIKey.tags.map((tag, index) => (
 															// eslint-disable-next-line react/no-array-index-key
-															<Badge variant="solid" key={`${tag}-${index}`} color="secondary">
+															<Badge
+																textTransform="none"
+																variant="solid"
+																key={`${tag}-${index}`}
+																color="secondary"
+															>
 																{' '}
 																{tag}{' '}
 															</Badge>

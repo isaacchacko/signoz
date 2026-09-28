@@ -39,7 +39,7 @@ export const hostDetailsMetadataConfig: HostDetailMetadataConfigType[] = [
 		getValue: (h): string => h.meta?.[INFRA_MONITORING_ATTR_KEYS.OS_TYPE] || '-',
 		render: (value): React.ReactNode =>
 			value !== '-' ? (
-				<Badge color="primary" variant="outlined">
+				<Badge textTransform="none" color="primary" variant="outlined">
 					{value}
 				</Badge>
 			) : (

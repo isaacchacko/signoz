@@ -50,6 +50,7 @@ export function AlertRuleTags(props: AlertRuleTagsProps): JSX.Element {
 				const isLongTag = (tag?.label as string)?.length > 20;
 				const tagElem = (
 					<Badge
+						textTransform="none"
 						key={tag.value}
 						color={index % 2 ? 'highlight-danger' : 'primary'}
 						variant="outlined"
@@ -164,7 +165,7 @@ export function CollapseListContent({
 					<Flex gap={8}>
 						<Typography>{created_by_name}</Typography>
 						{created_by_email && (
-							<Badge variant="solid" color="secondary">
+							<Badge textTransform="none" variant="solid" color="secondary">
 								{created_by_email}
 							</Badge>
 						)}

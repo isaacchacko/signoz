@@ -153,6 +153,7 @@ function LabelSelect({
 						return (
 							<QueryChipContainer key={query.key}>
 								<Badge
+									textTransform="none"
 									variant="solid"
 									color="secondary"
 									suffix={

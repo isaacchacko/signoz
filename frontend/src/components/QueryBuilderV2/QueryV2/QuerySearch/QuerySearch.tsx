@@ -1502,7 +1502,7 @@ function QuerySearch({
 					{queryContext?.keyToken && (
 						<span className="triplet-info">
 							Key:{' '}
-							<Badge variant="solid" color="secondary">
+							<Badge textTransform="none" variant="solid" color="secondary">
 								{queryContext.keyToken}
 							</Badge>
 						</span>
@@ -1510,7 +1510,7 @@ function QuerySearch({
 					{queryContext?.operatorToken && (
 						<span className="triplet-info">
 							Operator:{' '}
-							<Badge variant="solid" color="secondary">
+							<Badge textTransform="none" variant="solid" color="secondary">
 								{queryContext.operatorToken}
 							</Badge>
 						</span>
@@ -1518,7 +1518,7 @@ function QuerySearch({
 					{queryContext?.valueToken && (
 						<span className="triplet-info">
 							Value:{' '}
-							<Badge variant="solid" color="secondary">
+							<Badge textTransform="none" variant="solid" color="secondary">
 								{queryContext.valueToken}
 							</Badge>
 						</span>
@@ -1526,14 +1526,14 @@ function QuerySearch({
 					{queryContext?.currentPair && (
 						<span className="triplet-info query-pair-info">
 							Current pair:{' '}
-							<Badge variant="solid" color="primary">
+							<Badge textTransform="none" variant="solid" color="primary">
 								{queryContext.currentPair.key}
 							</Badge>
-							<Badge variant="solid" color="highlight-danger">
+							<Badge textTransform="none" variant="solid" color="highlight-danger">
 								{queryContext.currentPair.operator}
 							</Badge>
 							{queryContext.currentPair.value && (
-								<Badge variant="solid" color="success">
+								<Badge textTransform="none" variant="solid" color="success">
 									{queryContext.currentPair.value}
 								</Badge>
 							)}

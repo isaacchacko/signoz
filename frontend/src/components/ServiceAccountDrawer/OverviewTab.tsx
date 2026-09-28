@@ -158,7 +158,12 @@ function OverviewTab({
 								localRoles.map((roleId) => {
 									const role = availableRoles.find((r) => r.id === roleId);
 									return (
-										<Badge variant="solid" key={roleId} color="secondary">
+										<Badge
+											textTransform="none"
+											variant="solid"
+											key={roleId}
+											color="secondary"
+										>
 											{role?.name ?? roleId}
 										</Badge>
 									);
@@ -198,7 +203,7 @@ function OverviewTab({
 						</Badge>
 					) : (
 						<Badge color="secondary" variant="outlined">
-							{account.status ? account.status.toUpperCase() : 'UNKNOWN'}
+							{account.status || 'UNKNOWN'}
 						</Badge>
 					)}
 				</div>

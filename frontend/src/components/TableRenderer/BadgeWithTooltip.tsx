@@ -12,7 +12,7 @@ function BadgeWithTooltip({
 	return (
 		<div key={label}>
 			<Tooltip title={tooltipTitle}>
-				<Badge variant="solid" color="secondary">
+				<Badge textTransform="none" variant="solid" color="secondary">
 					{getLabelRenderingValue(label, value && value[label])}
 				</Badge>
 			</Tooltip>

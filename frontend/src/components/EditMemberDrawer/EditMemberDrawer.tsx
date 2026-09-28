@@ -519,7 +519,12 @@ function EditMemberDrawer({
 									localRoles.map((roleId) => {
 										const role = availableRoles.find((r) => r.id === roleId);
 										return (
-											<Badge variant="solid" key={roleId} color="secondary">
+											<Badge
+												textTransform="none"
+												variant="solid"
+												key={roleId}
+												color="secondary"
+											>
 												{role?.name ?? roleId}
 											</Badge>
 										);

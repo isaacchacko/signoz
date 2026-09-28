@@ -116,7 +116,12 @@ export const getTraceListColumns = (
 
 					return (
 						<BlockLink to={getTraceLink(itemData)} openInNewTab>
-							<Badge testId={key} color="primary" variant="outlined">
+							<Badge
+								textTransform="none"
+								testId={key}
+								color="primary"
+								variant="outlined"
+							>
 								{httpMethod}
 							</Badge>
 						</BlockLink>

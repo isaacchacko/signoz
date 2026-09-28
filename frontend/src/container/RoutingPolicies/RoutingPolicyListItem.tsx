@@ -119,7 +119,12 @@ function PolicyListItemContent({
 				<Typography>Channels</Typography>
 				<div>
 					{routingPolicy.channels.map((channel) => (
-						<Badge variant="solid" key={channel} color="secondary">
+						<Badge
+							textTransform="none"
+							variant="solid"
+							key={channel}
+							color="secondary"
+						>
 							{channel}
 						</Badge>
 					))}

@@ -92,6 +92,7 @@ function TagInput({
 		const isLongTag = tag.length > 20;
 		const tagElem = (
 			<Badge
+				textTransform="none"
 				variant="solid"
 				key={tag}
 				color="secondary"
