@@ -57,6 +57,7 @@ function DashboardEmptyState({
 								size="md"
 								variant="solid"
 								color="secondary"
+								width="140px"
 								prefix={<Configure size="md" />}
 								disabled={!isEditable}
 								onClick={(): void => requestSettings({ tab: 'Overview' })}

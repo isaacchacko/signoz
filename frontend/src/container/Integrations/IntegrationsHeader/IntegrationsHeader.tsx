@@ -95,6 +95,7 @@ function IntegrationsHeader(props: IntegrationsHeaderProps): JSX.Element {
 					size="md"
 					variant="solid"
 					color="secondary"
+					width="200px"
 					prefix={<Cable size={14} />}
 					onClick={(): void => setIsRequestIntegrationDialogOpen(true)}
 				>
@@ -152,8 +153,9 @@ function IntegrationsHeader(props: IntegrationsHeaderProps): JSX.Element {
 						color="primary"
 						onClick={(): void => history.push(ROUTES.GET_STARTED_WITH_CLOUD)}
 						suffix={<ArrowRight size={14} />}
+						width="230px"
 					>
-						<span>View 150+ Data Sources</span>
+						View 150+ Data Sources
 					</Button>
 				)}
 			</div>
