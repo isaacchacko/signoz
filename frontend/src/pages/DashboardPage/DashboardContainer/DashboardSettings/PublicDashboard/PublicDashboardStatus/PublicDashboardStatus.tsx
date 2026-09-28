@@ -39,8 +39,11 @@ function PublicDashboardStatus({
 				</Typography.Text>
 			</div>
 
-			<Badge variant="outlined" color={isPublic ? 'primary' : 'secondary'}>
-				<span className={styles.statusBadgeDot} />
+			<Badge
+				prefix={<span className={styles.statusBadgeDot} />}
+				variant="outlined"
+				color={isPublic ? 'primary' : 'secondary'}
+			>
 				{isPublic ? 'Public' : 'Private'}
 			</Badge>
 		</div>
