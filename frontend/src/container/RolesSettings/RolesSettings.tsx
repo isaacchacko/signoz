@@ -25,9 +25,11 @@ function RolesSettings(): JSX.Element {
 			<div className={styles.rolesSettingsHeader}>
 				<h3 className={styles.rolesSettingsHeaderTitle}>Roles</h3>
 				<p className={styles.rolesSettingsHeaderDescription}>
-					{isRolesEnabled
-						? 'Create and manage custom roles for your team. '
-						: 'The built-in roles of this instance.'}{' '}
+					<span className="translate-safe">
+						{isRolesEnabled
+							? 'Create and manage custom roles for your team. '
+							: 'The built-in roles of this instance.'}
+					</span>{' '}
 					<a
 						href="https://signoz.io/docs/manage/administrator-guide/iam/roles/"
 						target="_blank"

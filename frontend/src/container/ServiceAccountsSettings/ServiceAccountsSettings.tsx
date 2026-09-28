@@ -4,8 +4,10 @@ import { Check, ChevronDown, Plus } from '@signozhq/icons';
 import { Button } from '@signozhq/ui/button';
 import { Dropdown, type DropdownItemType } from '@signozhq/ui/dropdown';
 import { Input } from '@signozhq/ui/input';
-import { useListServiceAccounts } from 'api/generated/services/serviceaccount';
-import { invalidateListServiceAccounts } from 'api/generated/services/serviceaccount';
+import {
+	invalidateListServiceAccounts,
+	useListServiceAccounts,
+} from 'api/generated/services/serviceaccount';
 import AuthZButton from 'lib/authz/components/AuthZButton/AuthZButton';
 import { AuthZGuardContent } from 'lib/authz/components/AuthZGuard/AuthZGuardContent';
 import AuthZTooltip from 'lib/authz/components/AuthZTooltip/AuthZTooltip';
