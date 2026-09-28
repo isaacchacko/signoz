@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Check, Plus, X } from '@signozhq/icons';
 import { Button, Flex } from 'antd';
-import { Badge } from '@signozhq/ui/badge';
+import { Pill } from '@signozhq/ui/pill';
 import Input from 'components/Input';
 
 import './Badges.styles.scss';
@@ -47,26 +47,13 @@ function Badges({ tags, setTags }: AddTagsProps): JSX.Element {
 	return (
 		<div className="tags-container">
 			{tags.map<React.ReactNode>((tag) => (
-				<Badge
+				<Pill.Closeable
 					textTransform="none"
-					variant="solid"
 					key={tag}
-					color="secondary"
-					suffix={
-						<button
-							type="button"
-							aria-label={`Remove ${tag}`}
-							onClick={(e): void => {
-								e.preventDefault();
-								handleClose(tag);
-							}}
-						>
-							<X size={12} />
-						</button>
-					}
+					onClose={() => handleClose(tag)}
 				>
 					{tag}
-				</Badge>
+				</Pill.Closeable>
 			))}
 
 			{inputVisible && (
