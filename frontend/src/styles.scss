@@ -25,8 +25,9 @@ body {
 
 	// compatibility changes, to reduce amount of drift
 	// between old code and new components
-	--badge-max-width: 100%; // ignore max-width of badges
+	--badge-max-width: min(300px, 100%); // ignore max-width of badges
 	--dropdown-internal-max-block-size: none; // ignore max-height of dropdowns
+	--toggle-group-label-max-inline-size: 300px;
 }
 
 body {
