@@ -98,8 +98,8 @@ function DeleteAccountModal(): JSX.Element {
 				loading={isDeleting}
 				onClick={handleConfirm}
 				data-testid="confirm-delete-btn"
+				prefix={<Trash2 size={12} />}
 			>
-				<Trash2 size={12} />
 				Delete
 			</AuthZButton>
 		</div>

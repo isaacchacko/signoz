@@ -383,8 +383,8 @@ function ServiceAccountDrawer({
 						onClick={(): void => {
 							void setIsDeleteOpen(true);
 						}}
+						prefix={<Trash2 size={12} />}
 					>
-						<Trash2 size={12} />
 						Delete Service Account
 					</AuthZButton>
 					<div className="sa-drawer__footer-right">
@@ -449,24 +449,17 @@ function ServiceAccountDrawer({
 					items={[
 						{
 							value: ServiceAccountDrawerTab.Overview,
-							label: (
-								<>
-									<LayoutGrid size={14} />
-									Overview
-								</>
-							),
+							label: 'Overview',
+							prefix: <LayoutGrid size={14} />,
 						},
 						{
 							value: ServiceAccountDrawerTab.Keys,
-							label: (
-								<>
-									<Key size={14} />
-									Keys
-									{keys.length > 0 && (
-										<span className="sa-drawer__tab-count">{keys.length}</span>
-									)}
-								</>
-							),
+							label: 'Keys',
+							prefix: <Key size={14} />,
+							suffix:
+								keys.length > 0 ? (
+									<span className="sa-drawer__tab-count">{keys.length}</span>
+								) : undefined,
 						},
 					]}
 				/>
@@ -484,8 +477,8 @@ function ServiceAccountDrawer({
 						onClick={(): void => {
 							void setIsAddKeyOpen(true);
 						}}
+						prefix={<Plus size={12} />}
 					>
-						<Plus size={12} />
 						Add Key
 					</AuthZButton>
 				)}

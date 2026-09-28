@@ -279,8 +279,8 @@ function ServiceAccountsSettings(): JSX.Element {
 						onClick={async (): Promise<void> => {
 							await setIsCreateModalOpen(true);
 						}}
+						prefix={<Plus size={12} />}
 					>
-						<Plus size={12} />
 						New Service Account
 					</AuthZButton>
 				</div>

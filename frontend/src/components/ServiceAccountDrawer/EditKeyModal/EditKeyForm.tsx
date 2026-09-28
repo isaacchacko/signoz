@@ -175,8 +175,8 @@ function EditKeyForm({
 					variant="link"
 					color="danger"
 					onClick={onRevokeClick}
+					prefix={<Trash2 size={12} />}
 				>
-					<Trash2 size={12} />
 					Revoke Key
 				</AuthZButton>
 				<div className="edit-key-modal__footer-right">

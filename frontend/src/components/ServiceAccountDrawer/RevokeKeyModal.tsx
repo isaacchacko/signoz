@@ -61,8 +61,8 @@ export function RevokeKeyFooter({
 				color="danger"
 				loading={isRevoking}
 				onClick={onConfirm}
+				prefix={<Trash2 size={12} />}
 			>
-				<Trash2 size={12} />
 				Revoke Key
 			</AuthZButton>
 		</>
