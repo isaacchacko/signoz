@@ -19,9 +19,9 @@
 	--button-variant-ghost-background-color: var(--l2-background);
 }
 
-.segmentIcon {
-	display: inline-flex;
-	align-items: center;
+/* An empty label would still take a flex gap after the icon. */
+.segmented [aria-pressed='false'] {
+	--button-label-display: none;
 }
 
 .segmented [aria-pressed='true'][data-option='reset'] {

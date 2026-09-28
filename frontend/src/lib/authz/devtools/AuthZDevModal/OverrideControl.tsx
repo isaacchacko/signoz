@@ -17,7 +17,7 @@ type OverrideControlProps = {
 type OverrideOption = {
 	state: OverrideState;
 	label: string;
-	icon: React.ReactNode;
+	icon: React.ReactElement;
 };
 
 const OVERRIDE_OPTIONS: OverrideOption[] = [
@@ -69,8 +69,8 @@ export function OverrideControl({
 							color="secondary"
 							onClick={(): void => onSelect(permission, option.state)}
 							testId={`override-${option.state}-${permission}`}
+							prefix={option.icon}
 						>
-							<div className={styles.segmentIcon}>{option.icon}</div>
 							{isActive && (
 								<Typography.Text as="span" size="small" weight="medium">
 									{option.label}

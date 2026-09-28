@@ -61,8 +61,8 @@ function RolesSettings(): JSX.Element {
 							color="primary"
 							width={156}
 							onClick={(): void => history.push(ROUTES.ROLE_CREATE)}
+							prefix={<Plus size={14} />}
 						>
-							<Plus size={14} />
 							Custom role
 						</AuthZButton>
 					)}
