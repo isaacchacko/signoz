@@ -1,4 +1,4 @@
-import { CSSProperties, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { Braces, Globe, Table } from '@signozhq/icons';
 import { Tabs, TabsItemProps } from '@signozhq/ui/tabs';
@@ -67,15 +67,11 @@ function DashboardSettings({ dashboard }: DashboardSettingsProps): JSX.Element {
 
 	return (
 		<Tabs
-			variant="primary"
+			variant="secondary" // TODO(H4ad): was primary, but due to a bug between antd drawer and tabs calculation, we changed to secondary, revert once migrated to signozhq/ui
 			orientation="horizontal"
 			alignment="start"
 			defaultValue={settingsRequest?.tab ?? TabKeys.OVERVIEW}
-			style={
-				{
-					'--tabs-content-padding': 'var(--spacing-4) 0',
-				} as CSSProperties
-			}
+			noTabContentPadding
 			items={items}
 		/>
 	);
