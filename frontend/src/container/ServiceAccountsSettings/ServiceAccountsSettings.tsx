@@ -257,7 +257,10 @@ function ServiceAccountsSettings(): JSX.Element {
 					</AuthZTooltip>
 
 					<div className="sa-settings__search">
-						<AuthZTooltip checks={[SAListPermission]}>
+						<AuthZTooltip
+							checks={[SAListPermission]}
+							triggerClassName="sa-settings__search-trigger"
+						>
 							<Input
 								type="search"
 								name="service-accounts-search"

@@ -42,7 +42,10 @@ function RolesSettings(): JSX.Element {
 			</div>
 			<div className={styles.rolesSettingsContent}>
 				<div className={styles.rolesSettingsToolbar}>
-					<AuthZTooltip checks={[RoleListPermission]}>
+					<AuthZTooltip
+						checks={[RoleListPermission]}
+						triggerClassName={styles.rolesSettingsSearch}
+					>
 						<Input
 							type="search"
 							placeholder="Search for roles..."

@@ -44,6 +44,11 @@ interface AuthZTooltipProps {
 	 * otherwise the tooltip will not have the correct z-index
 	 */
 	withPortal?: false;
+	/**
+	 * Class for the span that wraps the child while it is disabled. Use it when the
+	 * child's layout depends on its parent, e.g. an input that fills a flex row.
+	 */
+	triggerClassName?: string;
 }
 
 function AuthZTooltip({
@@ -54,6 +59,7 @@ function AuthZTooltip({
 	disabledTooltip,
 	side,
 	withPortal,
+	triggerClassName,
 }: AuthZTooltipProps): JSX.Element {
 	const { user } = useAppContext();
 	const inlineContainerRef = useRef<HTMLSpanElement>(null);
@@ -99,7 +105,7 @@ function AuthZTooltip({
 			 * A natively disabled control receives no hover, so the popup never
 			 * opens. The span is the trigger; the control stays disabled.
 			 */}
-			<span style={{ display: 'inline-flex' }}>
+			<span className={triggerClassName} style={{ display: 'inline-flex' }}>
 				{cloneElement(children, {
 					disabled: true,
 					style: DISABLED_STYLE,
