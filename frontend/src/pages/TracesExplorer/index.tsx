@@ -110,8 +110,9 @@ function TracesExplorer(): JSX.Element {
 		setIsLoadingQueries(false);
 	}, [queryClient]);
 
-	const [selectedView, setSelectedView] = useState<ExplorerViews>(() =>
-		getExplorerViewFromUrl(searchParams, panelTypesFromUrl),
+	const selectedView = useMemo(
+		() => getExplorerViewFromUrl(searchParams, panelTypesFromUrl),
+		[searchParams, panelTypesFromUrl],
 	);
 
 	const [warning, setWarning] = useState<Warning | undefined>();
@@ -136,8 +137,6 @@ function TracesExplorer(): JSX.Element {
 	const handleChangeSelectedView = useCallback(
 		(view: ExplorerViews, querySearchParameters?: ICurrentQueryData): void => {
 			handleSetConfig(explorerViewToPanelType[view], DataSource.TRACES);
-
-			setSelectedView(view);
 
 			handleExplorerTabChange(
 				explorerViewToPanelType[view],
